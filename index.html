@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Wood Framed Structure Design</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Design_Criteria">Design Criteria</a></li>
+        <li><a class="nav-link" href="#Lateral_Design">Lateral Design</a></li>
+        <li><a class="nav-link" href="#Gravity_Design">Gravity Design</a></li>
+        <li><a class="nav-link" href="#Foundation_Design">Foundation Design</a></li>
+        <li><a class="nav-link" href="#References">References</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>In the United States, wood framed structures are some of the most common type of structures around. From single & multi-family residential buildings to schools and offices, structural engineers utilize wood as an economical and environmentally friendly option for design and construction.</p>
+
+          <p>Although very common in practice, only about half of all achitectural and civil engineer schools offer wood design courses to undergraduate students. More information regarding this statistic can be found in this article published in Structure Magazine back in August of 2020 titled <a href="https://www.structuremag.org/?p=16306">"Used the Most, Taught the Least"</a>.</p>
+
+          <p>In hopes to help engineers with the design of wood structures, this guide lays out the general design process to go through. It should be noted that this won't get into the fine details of wood design, such as connections. This guide assumes you have the following basic background knowledge:</p>
+          <ul>
+            <li>A general understanding of determining design loads.</li>
+            <li>The ability to follow load paths for both vertical and lateral loads.</li>
+            <li>Some wood design experience, including but not limited to beams, columns, shear walls and diaphragms.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Design_Criteria">
+        <header>Design Criteria</header>
+        <article>
+          <p>Before getting into the actual design of the structure, we have to know what we are designing for! In most cases, a structural engineer would get an initial architectural set of drawings. These drawings can help engineers extract a bunch of different information such as what the use of the building is, what the composition of the roof, floors and walls are, and how what dimensions are. All of this information can help us determine the following design loads:</p>
+          <ul>
+            <li>Dead Loads</li>
+            <li>Live Loads</li>
+            <li>Snow Loads</li>
+            <li>Wind Loads (Vertical and Lateral)</li>
+            <li>Seismic Loads</li>
+          </ul>
+
+          <p>The above loads can be determined by using the American Society of Civil Engineering: Minimum Design Loads and Associated Criteria for Buildings and Other Structures - also know as ASCE 7. Below are some examples of the load combinations that may be used in the gravity design:</p>
+
+          <code>
+            1) D <br>
+            2) D + L <br>
+            3) D + S <br>
+            4) D + 0.75L + 0.75S <br>
+            5) D + 0.6W <br>
+            6) D + 0.75L + 0.45W + 0.75S <br>
+          </code>
+
+        </article>
+      </section><br>
+      <section class="main-section" id="Lateral_Design">
+        <header>Lateral Design</header>
+        <article>
+          <p>Depending on the preference of the engineer, one may start with the gravity design first but in this guide, it is recommended that the lateral design be tackled first in case any overturning forces need to be considered in the gravity design.</p>
+
+          <p>The design of the lateral elements in a wood framed structure can be fairly straight forward, but at times, tracing the loads can be complex if elements do not align vertically. Below is a step by step process in which the lateral design should be followed:</p>
+          <ul>
+            <li>Determine your base shear:
+              <ul>
+                <li>Seismic:
+                  <ul>
+                    <li>Calculate the overall seismic weight.</li>
+                    <li>Determine the base shear based on the seismic response coefficient using the following equation:</li><br>
+                    <code>
+                      V = Cs * W <br>
+                      Where: <ul> Cs = Seismic Response Coefficient</ul>
+                        <ul>W = Seismic Weight</ul>
+                    </code>
+                  </ul>
+                </li>
+              </ul>
+              <ul><br>
+                <li>Wind:
+                  <ul>
+                    <li>Calulate wind pressures and forces in both directions of structure.</li>
+                  </ul>
+                </li>
+              </ul>
+                <li>Determine controlling base shear in both directions.</li>
+            </li>
+            <li>Distribute base shear vertically</li>
+            <li>Distribute lateral forces at each level horizontally to each shear wall line.</li>
+            <li>Design shear walls for each level:
+              <ul>
+                <li>Determine sheathing nailing pattern and holdowns.</li>
+                <li>Determine holdown requirements at wall ends, if necessary. Below are some examples of allowable loads for Holdowns typically used from Simpson Strong-Tie:</li><br>
+                <code>
+                      HDU2 = 2215 lbs <br>
+                      HDU4 = 3285 lbs <br>
+                      HDU5 = 4340 lbs <br>
+                      HDU8 = 5820 lbs <br>
+                      HDU11 = 8030 lbs <br>
+                      HDU14 = 9260 lbs <br>
+                    </code><br>
+              </ul>
+            </li>
+            <li>Design the diaphragm at each level:
+              <ul>
+                <li>Determine diaphragm design loads based on ASCE 7.</li>
+                <li>Distribute diaphragm design loads horizontally at each level to each shear wall line.</li>
+                <li>Determine if blocked diaphragms are necessary.</li>
+                <li>Design chords and collectors at each level.</li>
+        </article>
+      </section>
+      <section class="main-section" id="Gravity_Design">
+        <header>Gravity Design</header>
+        <article>
+          <p>The design of the gravity system in a wood framed structure is fairly redundant from floor to floor. The real fun in gravity design comes when complicated floor plans and non-stacking bearing walls are introduced. In this guide, we'll consider be considering a basic structure.</p>
+
+          <p> One of the most important factors in wood design is the load duraction factor, C<sub>D</sub>. The factor can increase the capacity of the element being design, but care must be taken when selecting the correct factor value. Below are the frequently used load duration factors listed in the NDS Table 2.3.2:</p>
+          <ul>
+          <code>
+            Dead Load: C<sub>D</sub> = 0.9 <br>
+            Occupancy Live Load: C<sub>D</sub> = 1.0 <br>
+            Snow Load: C<sub>D</sub> = 1.15 <br>
+            Construction Load: C<sub>D</sub> = 1.25 <br>
+            Wind/Earthquake Load: C<sub>D</sub> = 1.6 <br>
+          </code>
+          </ul>
+          <ul>
+            <li>Design of roof framing:
+              <ul>
+                <li>Based on design roof dead, snow and wind loads, design the following:
+                  <ul>
+                    <li>Roof sheathing.</li>
+                    <li>Typical roof joist size and spacing.</li>
+                    <ul>
+                        <li>Note: If pre-manufactured roof trusses are being used, no design needs to be done but you'll want to know the reactions at the bearing points to design supporting elements.</li>
+                  </ul>
+                  <li>Header sizes and, if applicable, any girder sizes.</li>
+                  <li>Connections, especially if significant uplift forces are present.</li>
+                  </ul>
+                </li>
+              </ul>
+            <li>Design of 2nd floor framing:</li>
+              <ul>
+                <li>Based on the roof framing layout & reactions and the design dead and live loads of the 2nd floor, design the following:</li>
+                <ul>
+                  <li>Exterior and interior bearing walls size and spacing; typically 2x6 @ 16" on-center and 2x4 @ 16" on-center, respectively.</li>
+                  <li>Design of any posts.</li>
+                  <li>Floor sheathing.</li>
+                  <li>Typical floor joist size and spacing.</li>
+                  <li>Header sizes and, if applicable, any girder sizes.</li>
+                </ul>
+              </ul>
+            <li>Design of 1st floor framing:</li>
+              <ul>
+                <li>Similar to the design on the 2nd floor framing, the 1st floor framing will follow a similar approach. Based on the 2nd framing layout & reactions and the design dead and live loads of the 1st floor, design the following:</li>
+                <ul>
+                  <li>Exterior and interior bearing walls size and spacing; typically 2x6 @ 16" on-center and 2x4 @ 16" on-center, respectively.</li>
+                  <li>Design of any posts</li>
+                  <li>Floor sheathing.</li>
+                  <li>Typical floor joist size and spacing.</li>
+                  <li>Header sizes and, if applicable, any girder sizes.</li>
+                </ul>
+              </ul>
+
+        </article>
+      </section>
+      <section class="main-section" id="Foundation_Design">
+        <header>Foundation Design</header>
+        <article>
+          <p>The design of the foundation system for a typical wood framed structure is not complicated. With the knowledge of tracing loads down to the foundation, one can design the necessary elements in no time. One of the most important components of designing foundations is ensuring that the bearing pressure on the soil is less than the allowable bearing pressure provided by either a geotechnical engineer or the jurisdiction. Below is the typical bearing pressure equation:</p>
+          <code>
+            q<sub>max</sub> = P / A &le; q<sub>allow</sub><br>
+            Where: <ul>q<sub>max</sub> = Maximum Bearing Pressure from Design Loads</ul>
+            <ul>P = Factored Load Applied to the Foundation</ul>
+            <ul>A = Area of Foundaton</ul>
+            <ul>q<sub>allow</sub> = Allowable Bearing Pressure of Soil</ul>
+          </code>
+          <ul>
+            <li>Design of foundation elements:</li>
+              <ul>
+                <li>Based on reactions of the 1st floor elements, the following should be designed:</li>
+                <ul>
+                  <li>Continuous footings and stem walls at the exterior and, if applicable, the interior.</li>
+                  <li>Isolated footings to support any wood posts.</li>
+                </ul>
+              </ul>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="References">
+        <header>References</header>
+        <article>
+          <p>For more information about the design of wood framed structures, you can visit the following websites:
+            <ul>
+              <li>
+                <a 
+                  href="https://awc.org"
+                  target="_blank"
+                  >American Wood Council (AWC)
+                </a>
+               </li>
+               <li>
+                 <a
+                 href="https://www.woodworks.org" 
+                 target="_blank"
+                 >Wood Works
+                 </a>
+               </li>
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
